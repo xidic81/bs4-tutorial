@@ -24,7 +24,7 @@
 </nav>
 
 <div class="container-fluid">
-    {% for image in images %)
+    {% for image in images %}
         {{ image|safe }}
         <a href="{{ image.find('a')['href']|safe }}">{{ (image.find('a').find('img')['title']|safe }}</a>
     {% endfor%}
