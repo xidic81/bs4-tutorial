@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="/">Coba Scraping </a>
+  <a class="navbar-brand" href="/">Coba Scraping</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -23,10 +23,10 @@
   </ul>
 </nav>
 
-<div class="container-fluid">
-    {% for image in images %)
+<div class="container-fluid" style="margin-top:100px; text-align:center">
+    {% for image in images %}
         {{ image|safe }}
-        <a href="{{ image.find('a')['href']|safe }}">{{ (image.find('a').find('img')['title']|safe }}</a>
+        <a href="{{ image.find('a')['href']|safe }}">{{ image.find('a').find('img')['title']|safe }}</a>
     {% endfor%}
 </div>
 
